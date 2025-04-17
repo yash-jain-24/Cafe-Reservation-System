@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #320c01;
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: separate;
+            width: 1100px;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 3px;
+            background-color: darkgoldenrod;
+            color: white;
+            font-size: 25px;
+        }
+
+        th {
+            color: black;
+        }
+
+        caption {
+            color: white;
+            font-size: 40px;
+        }
+        #button {
+            cursor: pointer;
+            width: 80px;
+            padding: 3px;
+            margin-left: 683px;
+            margin-bottom: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white; margin-left: 600px; margin-bottom: 10px;">
+        OWNER SIGN UP
+    </h1>
+    <button id="button"><a href="Project_signup.html">SIGNUP</a></button>
+    </div>
+    <div id="container" style="margin-left: 173px; margin-top: 110px;">
+
+        <table>
+            <caption>BOOKINGS</caption>
+            <tr>
+                <th>DATE</th>
+                <th>TIME</th>
+                <th>NAME</th>
+                <th>SEATS</th>
+                <th>CONTACT</th>
+                <th>EMAIL</th>
+            </tr>
+            <% passname.forEach(User=> {%>
+                <tr>
+                    <td>
+                        <%=User.date %>
+                    </td>
+                    <td>
+                        <%=User.time %>
+                    </td>
+                    <td>
+                        <%=User.name %>
+                    </td>
+                    <td>
+                        <%=User.seats %>
+                    </td>
+                    <td>
+                        <%=User.contact %>
+                    </td>
+                    <td>
+                        <%=User.email %>
+                    </td>
+                </tr>
+                <%})%>
+        </table>
+    </div>
+</body>
+
+</html>

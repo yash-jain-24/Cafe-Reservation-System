@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #320c01;
+            display: grid;
+            grid-template-columns: 1fr 10fr;
+            grid-template-rows: 288px 288px 114px;
+
+        }
+
+        #nav {
+            position: relative;
+            right: 7px;
+            border: solid 1px black;
+            background-color: rgb(237, 209, 137);
+            width: 170px;
+            height: 97vh;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-left: 8px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        #nav li {
+            list-style: none;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: rgb(94, 68, 4);
+        }
+
+        #nav a:hover {
+            color: rgb(37, 27, 1);
+            background-color: white;
+            padding: 9px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        }
+
+        #sel {
+            color: rgb(37, 27, 1);
+            background-color: rgb(236, 233, 233);
+            padding: 9px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        }
+
+        .text {
+            color: goldenrod;
+        }
+
+        .input {
+            display: flex;
+            margin: 10px;
+            margin-right: 40px;
+        }
+
+        .bar {
+            padding: 10px;
+            margin-left: 20px;
+            width: 130px;
+        }
+
+        .area {
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            height: 260px;
+            color: goldenrod;
+            size: 100px;
+            margin-top: 50px;
+        }
+
+        #button {
+            margin-top: 10px;
+            margin-left: 315px;
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 39px;
+            width: 73px;
+            background-color: rgb(211, 157, 20);
+            color: white;
+        }
+
+        #button:hover {
+            background-color: rgb(169, 125, 14);
+            cursor: pointer;
+        }
+
+        .greeting {
+            font-size: 60px;
+            color: goldenrod;
+            margin-left: 300px;
+            padding-top: 71px;
+        }
+
+        .message {
+            font-size: 30px;
+            display: inline;
+            color: goldenrod;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 71px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="nav">
+            <li style="padding-left:30px;"><a href="Project_home.html">HOME</a></li>
+            <li><a href="Project_reservations.html" id="sel">RESERVATIONS</a></li>
+            <li style="padding-left:30px;"><a href="Project_menu.html">MENU</a></li>
+            <li style="padding-left:10px;"><a href="Project_locations.html">LOCATIONS</a></li>
+            <li style="padding-left:10px;"><a href="Project_ourstory.html">OUR STORY</a></li>
+            <li style="padding-left:17px;"><a href="Project_login.html">OWNER</a></li>
+        </ul>
+    </div>
+    <div class="area">
+        <fieldset style="width: 200px;">
+            <legend style="margin-left:285px;">RESERVATION</legend>
+            <form action="/Project_reservations.html" method="post">
+                <div style="display: flex;">
+                    <div class="input">
+                        <div>
+                            <div style="margin-left: 100px;">Date</div>
+                            <input style="margin-left:40px;" id="date" class="bar" type="date" onload="getDate()" name="date">
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            <div style="margin-left: 75px;">Time</div>
+                            <input id="time" class="bar" type="Time" value="20:00" name="time">
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            <div style="margin-left: 75px;">Seats</div>
+                            <input id="seats" class="bar" type="Number" value="1" name="seats">
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div class="input">
+                        <div>
+                            <div style="margin-left: 95px;">Name</div>
+                            <input style="margin-left:39px;" id="name" class="bar" type="text" name="name" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            <div style="margin-left: 73px;">Contact</div>
+                            <input style="margin-left:19px ;" id="contact" class="bar" type="number" name="contact" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            <div style="margin-left: 73px;">Mail Id</div>
+                            <input style="margin-left:19px ;" id="email" class="bar" type="email" name="email">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input id="button" type="submit"></input>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <div>
+    </div>
+    <div class="greeting" id="greeting"></div>
+    <div></div>
+    <div class="message" id="message"></div>
+
+
+    <script>
+        let greeting = document.getElementById("greeting");
+        let button = document.getElementById("button");
+        let message = document.getElementById("message");
+        let name = document.getElementById("name");
+        let seats = document.getElementById("seats");
+        let date = document.getElementById("date");
+        let time = document.getElementById("time");
+        let contact = document.getElementById("contact");
+        let email = document.getElementById("email");
+
+        button.onclick = function (event) {
+            if(date.value==""||time.value==""||name.value==""||seats.value==""||contact.value==""){
+                message.innerHTML = "Please enter required details"
+            }
+            else{ 
+            greeting.innerHTML = "THANK YOU FOR BOOKING";
+            message.innerHTML = name.value + " your booking has been confirmed, " + seats.value + " seat(s) have been booked on " + date.value + " at " + time.value;
+        }}
+
+        let today = new Date();
+        function getDate(){
+            date.value = today.getFullYear() + '-' + ('0' + (today.getMonth).slice(-2)) + ('0' + (today.getDate().slice(-2)));
+        }
+    </script>
+
+</body>
+
+</html>

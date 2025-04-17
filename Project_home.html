@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 10fr;
+            grid-template-rows: 360px 360px;
+            grid-row: 1 / span 3;
+            background-image: url(https://images.wallpaperscraft.com/image/single/cafe_chairs_tables_lighting_comfort_glass_39210_1600x900.jpg);
+            background-repeat: no-repeat;
+            background-size: 99.9%;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        #nav {
+            position: relative;
+            right: 7px;
+            border: solid 1px black;
+            background-color: rgb(237, 209, 137);
+            width: 170px;
+            height: 97vh;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-left: 8px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        #nav li {
+            list-style: none;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: rgb(94, 68, 4);
+        }
+
+        .name {
+            font-size: 100px;
+            font-style: italic;
+            color: goldenrod;
+            padding-left: 200px;
+            padding-top: 5px;
+            font-family: 'Lora', serif;
+        }
+
+        #nav a:hover {
+            color: rgb(37, 27, 1);
+            background-color: white;
+            padding: 9px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        }
+
+        #sel {
+            color: rgb(37, 27, 1);
+            background-color: rgb(236, 233, 233);
+            padding: 9px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        }
+        .tagline{
+            font-size: 100px;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="nav">
+            <li style="padding-left:30px;"><a href="Project_home.html" id="sel">HOME</a></li>
+            <li><a href="Project_reservations.html">RESERVATIONS</a></li>
+            <li style="padding-left:30px;"><a href="Project_menu.html">MENU</a></li>
+            <li style="padding-left:10px;"><a href="Project_locations.html">LOCATIONS</a></li>
+            <li style="padding-left:10px;"><a href="Project_ourstory.html">OUR STORY</a></li>
+            <li style="padding-left:17px;"><a href="Project_login.html">OWNER</a></li>
+        </ul>
+    </div>
+    <div class="name">COFFEE CULTURE</div>
+    <div></div>
+    <div class="tagline"></div>
+</body>
+
+</html>

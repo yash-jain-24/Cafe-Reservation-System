@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #320c01;
+            color: goldenrod;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-size: xx-large;
+        }
+
+        #login {
+            margin: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        #login>form>div {
+            padding: 5px;
+        }
+
+        .button {
+            cursor: pointer;
+            width: 80px;
+            padding: 3px;
+            margin-left: 50px;
+            margin-top: 40px;
+            margin-bottom: 17px;
+        }
+
+        .text {
+            margin-left: 27px;
+            margin-bottom: 0px;
+            margin-top: 52px;
+        }
+
+        form {
+            margin-left: 50px;
+            margin-right: 46px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login">
+        <fieldset style="width: 200px;">
+            <legend style="margin-left: 70px;">SIGNUP</legend>
+            <form action="/Project_signup.html" method="post">
+                <div>
+                    <div class="text" style="margin-left:47px ;">Email</div>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <div class="text">Username</div>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <div class="text">Password</div>
+                    <input type="password" name="password">
+                </div>
+                <div>
+                    <input class="button" id="submit" type="submit">
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <div id="message"></div>
+    <script>
+        let submit = document.getElementById("submit");
+        let message = document.getElementById("message");
+
+        submit.onclick = function (f) {
+            message.innerHTML = "New ID Password has been set"
+        }
+
+    </script>
+</body>
+
+</html>

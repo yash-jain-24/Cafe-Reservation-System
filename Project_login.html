@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #login {
+            margin: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        #login>form>div {
+            padding: 5px;
+        }
+
+        #button {
+            cursor: pointer;
+            width: 80px;
+            padding: 3px;
+            margin-left: 120px;
+            margin-top: 40px;
+            margin-bottom: 17px;
+        }
+
+        .text {
+            margin-left: 95px;
+            margin-bottom: 0px;
+            margin-top: 52px;
+        }
+
+        form {
+            margin-left: 50px;
+            margin-right: 46px;
+
+        }
+
+        body {
+            background-color: #320c01;
+            display: grid;
+            grid-template-columns: 1fr 10fr;
+            grid-template-rows: 288px 288px 114px;
+            color: goldenrod;
+            font-size: xx-large;
+
+        }
+
+        #nav {
+            position: relative;
+            right: 7px;
+            border: solid 1px black;
+            background-color: rgb(237, 209, 137);
+            width: 170px;
+            height: 97vh;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-left: 8px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        #nav li {
+            list-style: none;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: rgb(94, 68, 4);
+        }
+
+        #nav a:hover {
+            color: rgb(37, 27, 1);
+            background-color: white;
+            padding: 9px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        }
+
+        #sel {
+            color: rgb(37, 27, 1);
+            background-color: rgb(236, 233, 233);
+            padding: 9px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="nav">
+            <li style="padding-left:30px;"><a href="Project_home.html">HOME</a></li>
+            <li><a href="Project_reservations.html">RESERVATIONS</a></li>
+            <li style="padding-left:30px;"><a href="Project_menu.html">MENU</a></li>
+            <li style="padding-left:10px;"><a href="Project_locations.html">LOCATIONS</a></li>
+            <li style="padding-left:10px;"><a href="Project_ourstory.html">OUR STORY</a></li>
+            <li style="padding-top: 9px;padding-bottom: 9px;margin-top: 40px;margin-left: 0px;padding-left: 22px;" id="sel"><a href="Project_login.html">OWNER</a></li>
+        </ul>
+    </div>
+    <div id="login" style="margin-top: 300px;">
+        <fieldset style="width: 400px;">
+            <legend style="margin-left: 150px;">LOGIN</legend>
+            <form action="/Project_login.html" method="post">
+                <div>
+                    <div class="text">Username</div>
+                    <input type="text" style="width: 250px; 
+                    margin-left: 20px;
+                " name="lusername">
+                </div>
+                <div>
+                    <div class="text">Password</div>
+                    <input type="password" style="width: 250px; 
+                    margin-left: 20px;
+                " name="lpassword">
+                </div>
+                <div>
+                    <input id="button" type="submit">
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
